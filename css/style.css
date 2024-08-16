@@ -1,0 +1,133 @@
+@font-face {
+	font-family: "RimmaSans";
+	src: url('../fonts/RIMMA_SANS-BOLD.TTF');
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "Satoshi";
+	src: url('../fonts/Satoshi-Bold.woff');
+	font-weight: bold;
+}
+
+body {
+	background-image: url('../img/bg.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #10A8F6;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	color: white;
+	background-color: #f0f0f0;
+}
+
+.main{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 1154px;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.main__title{
+	font-weight: bold;
+	font-size: 89px;
+	line-height: 72px;
+	font-family: 'RimmaSans';
+	text-shadow: 0.66px 0.66px 7px #FFFFFF;
+}
+
+#container {
+	position: relative;
+	border-radius: 10px;
+}
+
+#canvas-container{
+	position: relative;
+}
+
+.canvas-bg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #10A8F6;
+	top: 0;
+	left: 0;
+	border-radius: 5px;
+	z-index: -1;
+}
+
+#canvas {
+	display: block;
+	border: 1px solid #FFFFFF;
+	border-radius: 5px;
+	/* max-width: 100%; */
+	margin: 0 auto;
+	touch-action: none;
+}
+
+#imageInput {
+	margin-bottom: 20px;
+}
+
+#downloadButton {
+	font-family: 'Satoshi';
+	font-size: 48px;
+	display: block;
+	width: 100%;
+	padding: 10px;
+	background-color: #FA5DD0;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 0.3s;
+	margin-top: 18.22px;
+	text-shadow: 1px -1px 10.7px #FFFFFF;
+}
+
+#removeImageButton{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	user-select: none;
+	cursor: pointer;
+	top: 22px;
+	right: 23px;
+	background-color: #FA5DD0;
+	border: none;
+	width: 40px;
+	height: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+	.main{
+		justify-content: center;
+		flex-direction: column;
+		/* background-color: #00000017; */
+	}
+	.main__title{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		text-shadow: 0.6px 0.6px 10px #a5a5a5;
+		/* margin: 20px 0 auto; */
+	}
+	#container{
+		margin: 70px;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.main__title{
+		font-size: 60px;
+		line-height: 60px;
+	}
+}
